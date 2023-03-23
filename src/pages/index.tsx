@@ -25,7 +25,9 @@ const Home: NextPage = () => {
             </SignInButton>
           }
           {!!user.isSignedIn &&
-            <SignOutButton className="text-slate-100">Sign Out</SignOutButton>
+            <div className="text-sltate-100">
+              <SignOutButton >Sign Out</SignOutButton>
+            </div>
           }
         </div>
       </main>
