@@ -4,9 +4,9 @@ import { clerkClient } from "@clerk/nextjs/server";
 import { createTRPCRouter, publicProcedure } from "~/server/api/trpc";
 import type { Post } from "@prisma/client";
 
-const filterUserForClient = (user: User) => {
-    return { id: user.id, username: user.username, profilePicture: user.profileImageUrl }
-}
+import { filterUserForClient } from "~/server/helpers/filterUserForClient";
+
+
 
 const addUserDataToPosts = async (posts: Post[]) => {
     const users = (
