@@ -46,7 +46,7 @@ const PostView = (props: postWithUser) => {
           {` · `}
           <span className="font-thin">{dayjs(post.createdAt).fromNow()}</span>
         </div>
-        <span>{post.content}</span>
+        <span className="text-xl">{post.content}</span>
       </div>
 
     </div>
@@ -70,7 +70,7 @@ const Feed = () => {
 
 const Home: NextPage = () => {
 
-  const { user, isLoaded: userLoaded, isSignedIn } = useUser();
+  const { isLoaded: userLoaded, isSignedIn } = useUser();
 
   if (!userLoaded) return <div />
 
